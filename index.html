@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wiring up Backbone with IndexedDB for Offline storage</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+  <style>
+    #notepad { float: none; }
+    #title { margin: 20px 0; }
+    #content { margin: 20px 0; min-height: 300px; }
+  </style>
+</head>
+<body>
+
+  <div class="container span8" role="main" id="notepad">
+    <header>
+      <h1 id="title" contenteditable>Untitled Document</h1>
+    </header>
+
+    <textarea name="content" id="content" class="span8">Insert something cyoot about kittens here</textarea>
+
+    <div class="well">
+      <button class="btn btn-primary pull-right" id="save">Save</button>
+    </div>
+
+    <footer>
+      Demo by <a href="http://cobbweb.me" title="Andrew Cobby">Andrew Cobby</a>.
+    </footer>
+  </div>
+
+  <!-- scripts at the bottom for good measure -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
+  <!-- include the IndexedDB adapter AFTER including Backbone -->
+  <script src="backbone-indexeddb.js"></script>
+  <script src="notepad.js"></script>
+</body>
+</html>
